@@ -8,7 +8,7 @@ export default function ProductsPage({ products }) {
   return (
     <>
       <Head>
-        <title>技术指标 - 股票指标网</title>
+        <title>技术指标 - 指标商店</title>
         <meta name="description" content="浏览我们所有的专业股票技术指标，包括抄底王、六彩神龙、RSI背离王等，找到最适合您交易策略的工具。" />
       </Head>
       <div className="bg-gray-50 py-12">
@@ -37,14 +37,14 @@ export default function ProductsPage({ products }) {
   );
 }
 
-// 这段 getStaticProps 函数会确保此页面只获取“指标类”产品
+// 这是修正后的 getStaticProps 函数，它会获取所有指标类的产品
 export async function getStaticProps() {
-  // 筛选出 category 为 'indicator' 的产品，或者没有 category 字段的老数据
+  // 筛选出 category 为 'indicator' 的产品，或者根本没有 category 字段的老数据
   const indicators = products.filter(p => p.category === 'indicator' || !p.category); 
   
   return {
     props: {
-      // 将过滤后的结果传递给页面组件，变量名保持为 products
+      // 将过滤后的结果传递给页面组件
       products: indicators, 
     },
   };
