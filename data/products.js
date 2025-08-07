@@ -1,4 +1,4 @@
-// /data/products.js (V3.1 稳定版 - 纯中文完整代码)
+// /data/products.js (V3.2 最终版 - 包含25款产品)
 
 export const products = [
   // === 技术指标 ===
@@ -62,6 +62,105 @@ export const products = [
     alipayQr: '/images/qr-alipay.png',
     wechatQr: '/images/qr-wechat.png',
   },
+  // --- 新增的8个技术指标 ---
+  {
+    id: 6,
+    slug: 'qushi-trend',
+    name: 'QUSHI趋势指标',
+    price: '359',
+    category: 'indicator',
+    shortDescription: '趋势跟踪类指标，通过彩色“河流”通道展示趋势的强度和方向。',
+    longDescription: '当价格在彩色通道上方运行时，市场处于上升趋势，通道成为动态支撑区；反之则为下降趋势，通道成为阻力区。通道宽度反应趋势强度。',
+    imageUrl: '/images/products/qushi.png', // 您需要添加这张图片
+    alipayQr: '/images/qr-alipay.png',
+    wechatQr: '/images/qr-wechat.png',
+  },
+  {
+    id: 7,
+    slug: 'vegas-tunnel',
+    name: '维加斯通道',
+    price: '459',
+    category: 'indicator',
+    shortDescription: '利用多条长期EMA均线判断长期趋势，过滤短期市场噪音。',
+    longDescription: '由长周期EMA组成趋势过滤器，短周期EMA组成交易通道。在牛市中，价格回调至交易通道是理想的买入时机。专为捕捉大规模行情设计。',
+    imageUrl: '/images/products/vegas.png', // 您需要添加这张图片
+    alipayQr: '/images/qr-alipay.png',
+    wechatQr: '/images/qr-wechat.png',
+  },
+  {
+    id: 8,
+    slug: 'blw6-wave-king',
+    name: 'BLW6波浪王',
+    price: '289',
+    category: 'indicator',
+    shortDescription: '动量振荡器，通过红绿柱体衡量多空力量的相对强度。',
+    longDescription: '绿色柱体代表多头动能，红色柱体代表空头动能。可用于确认趋势健康度，并通过背离信号预警潜在的趋势转折点。',
+    imageUrl: '/images/products/blw6.png', // 您需要添加这张图片
+    alipayQr: '/images/qr-alipay.png',
+    wechatQr: '/images/qr-wechat.png',
+  },
+  {
+    id: 9,
+    slug: 'cpgw1-chip-game',
+    name: 'CPGW1筹码博弈王',
+    price: '499',
+    category: 'indicator',
+    shortDescription: '直观的资金行为分析指标，标注主力资金的吸筹、拉升与出货阶段。',
+    longDescription: '通过不同颜色的区域，清晰地展示主力建仓区（潜在买点）、主力拉升区（主升浪）和主力出货区（警示信号），让您跟随“聪明钱”的脚步。',
+    imageUrl: '/images/products/cpgw1.png', // 您需要添加这张图片
+    alipayQr: '/images/qr-alipay.png',
+    wechatQr: '/images/qr-wechat.png',
+  },
+  {
+    id: 10,
+    slug: 'cd11-oversold-bounce',
+    name: 'CD11超跌反弹',
+    price: '279',
+    category: 'indicator',
+    shortDescription: '捕捉短期超买超卖信号，适用于寻找短线反弹或回调机会。',
+    longDescription: '当指标线进入下方的超卖区时，是潜在的短线买点；当指标线进入上方的超买区时，是潜在的短线卖点。',
+    imageUrl: '/images/products/cd11.png', // 您需要添加这张图片
+    alipayQr: '/images/qr-alipay.png',
+    wechatQr: '/images/qr-wechat.png',
+  },
+  {
+    id: 11,
+    slug: 'obv-on-balance-volume',
+    name: 'OBV能量潮',
+    price: '199',
+    category: 'indicator',
+    shortDescription: '经典的量价关系指标，通过累计成交量衡量资金流入流出的强度。',
+    longDescription: '核心思想是“量在价先”。通过观察OBV线与价格走势的背离（价格新高/新低，OBV未同步），可以发现重要的趋势反转信号。',
+    imageUrl: '/images/products/obv.png', // 您需要添加这张图片
+    alipayQr: '/images/qr-alipay.png',
+    wechatQr: '/images/qr-wechat.png',
+  },
+  {
+    id: 12,
+    slug: 'td16-td-trend',
+    name: 'TD16趋势',
+    price: '599',
+    category: 'indicator',
+    shortDescription: '基于TD序列，旨在识别趋势衰竭点，预测当前趋势的潜在反转。',
+    longDescription: '通过对K线进行特定规则的计数，寻找“9”和“13”这两个神奇数字，以发出高概率的顶部或底部反转警示，是强大的逆势交易工具。',
+    imageUrl: '/images/products/td16.png', // 您需要添加这张图片
+    alipayQr: '/images/qr-alipay.png',
+    wechatQr: '/images/qr-wechat.png',
+  },
+  {
+    id: 13,
+    slug: 'longwave-shortwave',
+    name: 'LONGWAVE长短波',
+    price: '399',
+    category: 'indicator',
+    shortDescription: '趋势跟踪和通道指标，清晰定义市场主趋势并给出关键支撑阻力。',
+    longDescription: '由绿色长波通道判断长期趋势方向，由红色短波阶梯线寻找趋势中的交易点。当价格在绿通之上且站稳红线，是典型的多头信号。',
+    imageUrl: '/images/products/longwave.png', // 您需要添加这张图片
+    alipayQr: '/images/qr-alipay.png',
+    wechatQr: '/images/qr-wechat.png',
+  },
+
+ 
 
   // === 专业选股器 ===
   // 美股
