@@ -1,18 +1,17 @@
 // /pages/sitemap.xml.js
 import { products } from '../data/products';
 
-export const runtime = 'edge'; // <-- 添加这一行
+export const runtime = 'experimental-edge'; // <-- 确保是这个值
 
-const BASE_URL = 'https://stock-indicator.com'; // 部署后请替换成你的域名
+// 您可以先把域名换成Cloudflare提供的，部署成功后再换成自己的最终域名
+const BASE_URL = 'https://stock-indicator-store.pages.dev'; 
 
 function generateSiteMap(products) {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <!-- Add the home page -->
      <url>
        <loc>${BASE_URL}</loc>
      </url>
-     <!-- Add product pages -->
      ${products
        .map(({ slug }) => {
          return `
