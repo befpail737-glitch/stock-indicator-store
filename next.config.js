@@ -1,11 +1,9 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // 如果你的产品图片来自外部域名，需要在这里配置
-  // images: {
-  //   domains: ['example.com'],
-  // },
+
+  // V3.2 Build - 这行注释会强制 Cloudflare 进行一次全新的构建，以刷新所有数据缓存。
+  // 这将确保它读取最新的 product.js 文件。
 }
 
 module.exports = nextConfig
