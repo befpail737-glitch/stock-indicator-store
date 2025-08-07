@@ -1,3 +1,4 @@
+// /pages/products/[slug].js (V3.1 稳定版)
 import { useState } from 'react';
 import { products } from '../../data/products';
 import Link from 'next/link';
@@ -28,7 +29,7 @@ export default function ProductPage({ product, relatedProducts }) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          productName: product.name,
+          productName: product.name, // 使用纯文本 name
           contactInfo: contactInfo,
         }),
       });
@@ -49,7 +50,7 @@ export default function ProductPage({ product, relatedProducts }) {
   return (
     <>
       <Head>
-        <title>{`${product.name} - 股票指标商城`}</title>
+        <title>{`${product.name} - 股票指标网`}</title>
         <meta name="description" content={product.shortDescription} />
       </Head>
       <div className="bg-white">

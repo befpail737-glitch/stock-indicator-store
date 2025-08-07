@@ -1,4 +1,4 @@
-// /pages/index.js
+// /pages/index.js (V3.1 稳定版)
 import Link from 'next/link';
 import { products } from '../data/products';
 
@@ -8,14 +8,14 @@ const featuredProducts = products.slice(0, 3);
 export default function Home() {
   return (
     <div className="bg-white">
-      {/* 1. 英雄横幅 (Hero Section) */}
+      {/* 1. 英雄横幅 */}
       <section className="bg-gray-900 text-white">
         <div className="container mx-auto px-6 py-20 text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
             用数据驱动决策，用指标点亮未来
           </h1>
           <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-            欢迎来到股票指标商城。我们致力于提供经过市场深度验证的专业股票分析工具，帮助您在复杂的金融市场中洞察先机，稳操胜券。
+            欢迎来到股票指标网。我们致力于提供经过市场深度验证的专业股票分析工具，帮助您在复杂的金融市场中洞察先机，稳操券。
           </p>
           <div className="mt-8">
             <Link href="/products" className="px-8 py-4 bg-indigo-600 text-white font-bold rounded-full hover:bg-indigo-500 transition-transform duration-300 inline-block transform hover:scale-105">

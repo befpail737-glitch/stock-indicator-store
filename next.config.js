@@ -1,10 +1,7 @@
-// next.config.js
-const { i18n } = require('./next-i18next.config');
-
+// next.config.js (V3.1 稳定版)
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  i18n, // <-- 将 i18n 配置应用到这里
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
