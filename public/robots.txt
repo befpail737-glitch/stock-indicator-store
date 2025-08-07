@@ -1,0 +1,6 @@
+# /public/robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/ # 禁止抓取后台管理页面
+
+Sitemap: https://stock-indicator.com/sitemap.xml # 部署后请将 your-domain.com 替换成你的域名

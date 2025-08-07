@@ -1,0 +1,9 @@
+/* /styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 你可以在这里添加一些自定义的全局样式 */
+html {
+  scroll-behavior: smooth;
+}
