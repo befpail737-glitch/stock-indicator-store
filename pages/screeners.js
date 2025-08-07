@@ -1,4 +1,5 @@
-// /pages/screeners.js (V3.1 稳定版)
+// /pages/screeners.js (V3.1 最终正确版)
+
 import Link from 'next/link';
 import { products } from '../data/products';
 import Head from 'next/head';
@@ -8,12 +9,13 @@ export default function ScreenersPage({ screeners }) {
     <>
       <Head>
         <title>专业选股器 - 股票指标网</title>
-        <meta name="description" content="一系列针对美股、日股、港股的专业选股器，助您高效发现投资机会。" />
+        <meta name="description" content="一系列针对美股、日股、港股的专业选股器，覆盖从30分钟到周线的不同交易周期，助您高效发现投资机会。" />
       </Head>
       <div className="bg-gray-50 py-12">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold text-gray-800 text-center mb-2">专业选股器</h1>
+          <h1 className="text-4xl font-bold text-gray-800 text-center mb-2">专业选- 股器</h1>
           <p className="text-center text-gray-600 mb-10">覆盖美股、日股、港股市场，满足您的多元化交易需求</p>
+          
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {screeners.map(product => (
               <div key={product.id} className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
@@ -44,14 +46,4 @@ export async function getStaticProps() {
       screeners,
     },
   };
-}```
-
----
-
-### **您的下一步**
-
-1.  **逐一替换**：请用上面提供的4个代码块，完整替换掉您本地对应的4个文件。
-2.  **确认其他文件**：同时，请确保您已经按照我之前的指示，恢复了 `/data/products.js` (最重要), `/pages/_app.js`, `/components/Navbar.js` 等文件的代码。
-3.  **提交并推送**：通过 GitHub Desktop 提交并推送这次“回滚”操作。
-
-完成之后，您的网站就会彻底恢复到功能完整、运行稳定的纯中文版本。
+}
