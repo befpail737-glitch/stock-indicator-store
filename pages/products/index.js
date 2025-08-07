@@ -1,4 +1,5 @@
 // /pages/products/index.js
+
 import Link from 'next/link';
 import { products } from '../../data/products';
 import Head from 'next/head';
@@ -7,12 +8,12 @@ export default function ProductsPage({ products }) {
   return (
     <>
       <Head>
-        <title>所有产品 - 股票指标商城</title>
-        <meta name="description" content="浏览我们所有的专业股票指标和选股器，包括抄底王、六彩神龙、RSI背离王等，找到最适合您交易策略的工具。" />
+        <title>技术指标 - 股票指标网</title>
+        <meta name="description" content="浏览我们所有的专业股票技术指标，包括抄底王、六彩神龙、RSI背离王等，找到最适合您交易策略的工具。" />
       </Head>
       <div className="bg-gray-50 py-12">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold text-gray-800 text-center mb-10">所有产品</h1>
+          <h1 className="text-4xl font-bold text-gray-800 text-center mb-10">技术指标</h1>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {products.map(product => (
               <div key={product.id} className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
@@ -36,10 +37,15 @@ export default function ProductsPage({ products }) {
   );
 }
 
+// 这段 getStaticProps 函数会确保此页面只获取“指标类”产品
 export async function getStaticProps() {
+  // 筛选出 category 为 'indicator' 的产品，或者没有 category 字段的老数据
+  const indicators = products.filter(p => p.category === 'indicator' || !p.category); 
+  
   return {
     props: {
-      products,
+      // 将过滤后的结果传递给页面组件，变量名保持为 products
+      products: indicators, 
     },
   };
 }
