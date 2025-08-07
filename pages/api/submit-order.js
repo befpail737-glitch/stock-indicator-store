@@ -3,6 +3,8 @@
 // 注意：服务重启后数据会丢失。在生产环境中应使用Cloudflare KV或D1数据库。
 const orders = [];
 
+export const runtime = 'edge'; // <-- 添加这一行
+
 export default function handler(req, res) {
   if (req.method === 'POST') {
     const { productName, contactInfo } = req.body;

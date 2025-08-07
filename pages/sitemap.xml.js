@@ -1,6 +1,8 @@
 // /pages/sitemap.xml.js
 import { products } from '../data/products';
 
+export const runtime = 'edge'; // <-- 添加这一行
+
 const BASE_URL = 'https://stock-indicator.com'; // 部署后请替换成你的域名
 
 function generateSiteMap(products) {
